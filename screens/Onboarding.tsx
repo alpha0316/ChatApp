@@ -124,8 +124,7 @@ const styles = StyleSheet.create({
     logIn : {
         justifyContent : 'center',
         flexDirection : 'row',
-        gap : 8,
-        marginTop : 48
+        gap : 4,
     },
     t1 : {
         color : '#B9C1BE',
@@ -133,7 +132,7 @@ const styles = StyleSheet.create({
     },
     t2 : {
         color : '#fff',
-        fontSize : 14
+        
     }
   });
   

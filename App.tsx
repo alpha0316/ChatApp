@@ -1,13 +1,14 @@
 import React from "react";
 import { Text , View , SafeAreaView, StyleSheet} from 'react-native'
 import SplashScreen from "./screens/SplashScreen";
-import Onboarding from './screens/Onboarding'
+import SignIn from './screens/SignIn'
+import SignUp from "./screens/SignUp";
 
 const App = () => {
   return(
     <View style={styles.container}>
      
-            <Onboarding/>
+            <SignIn/>
       
     </View>
     
