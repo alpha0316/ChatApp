@@ -3,7 +3,7 @@ import { SafeAreaView ,View , Text, StyleSheet,} from "react-native";
 import Svg, { Path } from "react-native-svg"
 import PrimaryButton from '../components/Primarybutton'
 
-const SplashScreen = () => {
+const Onboarding = ({ navigation }) => {
     return(
         <SafeAreaView style={styles.container}>
             <View style={styles.logo}>
@@ -45,10 +45,11 @@ const SplashScreen = () => {
                 <Text style ={styles.orText}>OR</Text>
                 <View style={styles.line}></View>
             </View>
-            <PrimaryButton title={'Sign up withn mail'} backgroundColor={'white'} color={'black'}/>
+            <PrimaryButton  title={'Sign up withn mail'} backgroundColor={'white'} color={'black'} onPress={() => navigation.navigate('SignUp')} />
+            
             <View style={styles.logIn}>
                 <Text style={styles.t1}>Existing account?</Text>
-                <Text style={styles.t2}>Log in</Text>
+                <Text onPress={() => navigation.navigate('SignIn')}  style={styles.t2}>Log in</Text>
             </View>
         </SafeAreaView>
     )
@@ -138,4 +139,4 @@ const styles = StyleSheet.create({
   
 
 
-export default SplashScreen
+export default Onboarding

@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from 'react';
 import { SafeAreaView ,View , Text, StyleSheet } from "react-native";
 import Svg, { Path } from "react-native-svg"
+import SplashScreen from 'react-native-splash-screen';
 
-const SplashScreen = () => {
+const Splash = ({ navigation }) => {
+    const timer = setTimeout(() => {
+        navigation.replace('Onboarding'); // Navigate to your main app screen
+      }, 2000); // Adjust the delay duration as needed
     return(
+        
         <SafeAreaView style={styles.container}>
             <View style={styles.main}>
                 <Svg width="60" height="71" viewBox="0 0 60 71" fill="none">
@@ -37,4 +42,4 @@ const styles = StyleSheet.create({
   
 
 
-export default SplashScreen
+export default Splash

@@ -3,10 +3,16 @@ import { SafeAreaView ,View , Text, StyleSheet, TextInput,} from "react-native";
 import Svg, { Path } from "react-native-svg"
 import PrimaryButton from '../components/Primarybutton'
 
-const SignUp = () => {
+const SignUp = ( { navigation } ) => {
+    const handleGoBack = () => {
+        // Perform any additional logic before navigating back
+        // For now, simply log a message and navigate back
+        console.log("Going back");
+        navigation.goBack();
+      };
     return(
         <SafeAreaView style={styles.container}>
-            <View style={styles.back}>
+            <View onPress={handleGoBack} style={styles.back} >
                 <Svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <Path d="M10 8L6 12M6 12L10 16M6 12L18 12" stroke="#000E08" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </Svg>
@@ -46,7 +52,7 @@ const SignUp = () => {
                 </View>
             </View>
             <View style={styles.button}>
-                <PrimaryButton title={'Create an account'} color={'white'} backgroundColor={'#24786D'}/>
+                <PrimaryButton title={'Create an account'} color={'white'} backgroundColor={'#24786D'} onPress={() => navigation.navigate('SignUp')}/>
             </View>
             
         </SafeAreaView>
@@ -56,7 +62,6 @@ const SignUp = () => {
 const styles = StyleSheet.create({
     container: {
       flex : 1, 
-      backgroundColor: 'white',
       gap : 16,
       marginHorizontal : 24
     },

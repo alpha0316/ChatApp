@@ -3,7 +3,7 @@ import { SafeAreaView ,View , Text, StyleSheet, TextInput,} from "react-native";
 import Svg, { Path } from "react-native-svg"
 import PrimaryButton from '../components/Primarybutton'
 
-const SignUp = () => {
+const SignIn = () => {
     return(
         <SafeAreaView style={styles.container}>
             <View style={styles.back}>
@@ -75,7 +75,6 @@ const SignUp = () => {
 const styles = StyleSheet.create({
     container: {
       flex : 1, 
-      backgroundColor: 'white',
       gap : 16,
       marginHorizontal : 24,
       alignContent : 'center',
@@ -151,4 +150,4 @@ const styles = StyleSheet.create({
   
 
 
-export default SignUp
+export default SignIn
